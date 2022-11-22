@@ -3,13 +3,13 @@
 #include "Stryng.h"
 
 int main() {
-	// Tøída reprezentující string
+	// Trída reprezentující string
 	const char* c1 = "Dobry den.";
 
-	// Výchozí hodnota øetìzce
+	// Výchozí hodnota retezce
 	Stryng s1(c1);
 
-	// Získání øetìzce
+	// Získání retezce
 	std::cout << s1.Value() << "\n";
 
 	// Length
@@ -20,7 +20,7 @@ int main() {
 	Stryng s2 = s1.Substring(2, 3);
 	std::cout << s2.Value() << "\n";
 
-	// Pøipojení nového øetìzce
+	// Pripojení nového retezce
 	Stryng s3 = s1.Append("haha");
 	std::cout << s3.Value() << "\n";
 
