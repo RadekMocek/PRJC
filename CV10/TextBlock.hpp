@@ -3,7 +3,10 @@
 #include <string>
 
 class IColorSetter {
+protected:
+	std::string* content;
 public:
+	IColorSetter(std::string* content);
 	virtual const void setColor() = 0;
 };
 
@@ -16,22 +19,18 @@ public:
 	std::string* getContent();
 	const void setColorSetter(IColorSetter* colorSetter);
 	const void setColor();
-	friend std::ostream& operator <<(std::ostream& outputStream, const TextBlock& block);
+	friend std::ostream& operator<<(std::ostream& outputStream, const TextBlock& block);
 	~TextBlock();
 };
 
 class RedColorSetter : public IColorSetter {
-private:
-	std::string* content;
 public:
 	RedColorSetter(std::string* content);
-	const void setColor();
+	const void setColor() override;
 };
 
 class GreenColorSetter : public IColorSetter {
-private:
-	std::string* content;
 public:
 	GreenColorSetter(std::string* content);
-	const void setColor();
+	const void setColor() override;
 };

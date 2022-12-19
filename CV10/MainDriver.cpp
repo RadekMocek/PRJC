@@ -3,7 +3,7 @@
 #include <vector>
 #include <iostream>
 
-void main() {
+int main() {
 
 	std::vector<TextBlock*> paragraph;
 
@@ -16,4 +16,5 @@ void main() {
 
 	std::cout << *tp1 << "\n";
 	
+	return 0;
 }
